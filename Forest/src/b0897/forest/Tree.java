@@ -1,6 +1,6 @@
 package b0897.forest;
 
-public class Tree {
+public abstract class Tree {
 	
 	private String name;
 	private double height;
@@ -30,6 +30,24 @@ public class Tree {
 	}
 	
 	public abstract void grow();
+	
+	public String introduce() {
+		String mName = "\nname: " + getName();
+		String mHeight = "\nheight: " + getHeight();
+		String mRings = "\nnumber of rings: " + getRings();
+		
+		String mLonely = "";
+		if ( isLonely() == true ) {
+			mLonely = "\nThis tree is lonely";
+		}else {
+			mLonely = "\nThis tree has companion";
+		}
+		
+		String mBranches = "\nbranches: " + getBranches();
+		String mLeaves = "\nleaves: " + getLeaves();
+		
+		return mName + mHeight + mRings + mLonely + mBranches + mLeaves;
+	};
 
 	public Branches getBranches() {
 		return branches;

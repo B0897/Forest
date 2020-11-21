@@ -4,7 +4,7 @@ import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 
-public class Conifer extends Tree{
+public class Conifer extends Tree {
 	
 	private int squirrels;
 
@@ -25,6 +25,13 @@ public class Conifer extends Tree{
 	public void grow() {
 		this.setHeight(this.getHeight()* 1.1);
 		this.setRings(this.getRings()+1);
+	}
+	
+	@Override
+	public String introduce() {
+		String a = "This is a conifer tree" + super.introduce() + "\nnumber of squirrels: "+getSquirrels();
+		System.out.println(a);
+		return a;
 	}
 	
 	public void choinka() {		
