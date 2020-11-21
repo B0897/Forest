@@ -11,25 +11,25 @@ public class Tree {
 	
 	public Tree() {};
 	
-	public Tree(String nazw, int wys, int sloje, boolean sam, int ilosc, int zlamanych, String ksztalt, int ilosc2) {
-		this.setName(nazw);
-		this.height = wys;
-		this.rings = sloje;
-		this.lonely = sam;
-		this.branches = new Branches(ilosc, zlamanych);
-		this.leaves = new Leaves(ksztalt, ilosc2);
+	public Tree(String n, int h, int r, boolean l, int a, int b, String s, int a2) {
+		this.setName(n);
+		this.height = h;
+		this.rings = r;
+		this.lonely = l;
+		this.branches = new Branches(a, b);
+		this.leaves = new Leaves(s, a2);
 	}
 	
-	public Tree (Tree kopiowane) {
-		this.setName(kopiowane.getName());
-		this.height = kopiowane.height;
-		this.rings = kopiowane.rings;
-		this.lonely = kopiowane.lonely;
-		this.branches = kopiowane.branches;
-		this.leaves = kopiowane.leaves;
+	public Tree (Tree copied) {
+		this.setName(copied.getName());
+		this.height = copied.height;
+		this.rings = copied.rings;
+		this.lonely = copied.lonely;
+		this.branches = copied.branches;
+		this.leaves = copied.leaves;
 	}
 	
-	public abstract void rosnij();
+	public abstract void grow();
 
 	public Branches getBranches() {
 		return branches;
