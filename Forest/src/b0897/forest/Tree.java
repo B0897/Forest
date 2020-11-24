@@ -32,21 +32,25 @@ public abstract class Tree {
 	public abstract void grow();
 	
 	public String introduce() {
-		String mName = "\nname: " + getName();
-		String mHeight = "\nheight: " + getHeight();
-		String mRings = "\nnumber of rings: " + getRings();
-		
-		String mLonely = "";
-		if ( isLonely() == true ) {
-			mLonely = "\nThis tree is lonely";
-		}else {
-			mLonely = "\nThis tree has companion";
+		if (name != null  && height !=0 && rings != 0 &&  branches != null && leaves != null) {
+			String mName = "\nname: " + getName();
+			String mHeight = "\nheight: " + getHeight();
+			String mRings = "\nnumber of rings: " + getRings();
+
+			String mLonely = "";
+			if (isLonely() == true) {
+				mLonely = "\nThis tree is lonely";
+			} else {
+				mLonely = "\nThis tree has companion";
+			}
+
+			String mBranches = "\nbranches: " + getBranches().getNumber();
+			String mLeaves = "\nleaves: " + getLeaves().getNumber();
+
+			return mName + mHeight + mRings + mLonely + mBranches + mLeaves;
+		} else {
+			return "tree not build";
 		}
-		
-		String mBranches = "\nbranches: " + getBranches();
-		String mLeaves = "\nleaves: " + getLeaves();
-		
-		return mName + mHeight + mRings + mLonely + mBranches + mLeaves;
 	};
 
 	public Branches getBranches() {

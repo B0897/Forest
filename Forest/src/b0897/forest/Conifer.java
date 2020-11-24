@@ -34,12 +34,12 @@ public class Conifer extends Tree {
 		return a;
 	}
 	
-	public void choinka() {		
+	public void christmas() {		
 		Desktop desk = Desktop.getDesktop();
 		try {
 			desk.open(new File("plik.mp3"));
 		} catch (IOException e) {
-			System.out.println("did not work out :<");
+			System.out.println("christmas did not work :<");
 			e.printStackTrace();
 		} finally {
 			System.out.println("\n * * * HO * * * HO * * * HOOO * * *");
